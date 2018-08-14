@@ -6,6 +6,34 @@ import links from './../config/links'
 import Radium from 'radium';
 
 class News extends React.Component {
+  componentDidMount(){
+    var div, n,
+        v = document.getElementsByClassName("youtubePlayer");
+    for (n = 0; n < v.length; n++) {
+        div = document.createElement("div");
+        div.setAttribute("data-id", v[n].dataset.id);
+        div.innerHTML = labnolThumb(v[n].dataset.id);
+        div.onclick = labnolIframe;
+        v[n].appendChild(div);
+        // v[n].style.webkitTransform = 'scale(1)';
+    }
+    // );
+
+    function labnolThumb(id) {
+      var thumb = '<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',
+          play = '<div class="play"></div>';
+      return thumb.replace("ID", id) + play;
+    }
+
+    function labnolIframe() {
+      var iframe = document.createElement("iframe");
+      var embed = "https://www.youtube.com/embed/ID?autoplay=1";
+      iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
+      iframe.setAttribute("frameborder", "0");
+      iframe.setAttribute("allowfullscreen", "1");
+      this.parentNode.replaceChild(iframe, this);
+    }
+      }
   render() {
 
     var proj = [{title: 'First Magnetic Field Measurements of an Extrasolar Planetary Mass Object',
