@@ -1,0 +1,324 @@
+* {
+  box-sizing: border-box;
+}
+/*img{
+  display: block;
+}
+*/
+
+/*img {
+  float: left;
+  margin-right: 1em;
+}*/
+
+.App {
+  /*/text-align: center;*/
+  font-family: "Avenir", sans-serif;
+}
+
+.App-logo {
+  /*animation: App-logo-spin infinite 20s linear;*/
+  height: 80px;
+}
+
+.App-header {
+  /*background-color: #222;*/
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.App-nav {
+  /*background-color: #222;*/
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.Home {
+  background-image: url(./images/mkao_cropped.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
+  /*height: 750px;*/
+  /*max-width: 100%;*/
+  height: 100vh;
+  padding-top: 250px;
+}
+
+.Home p, a {
+  font-size: 14px;
+  padding: 0px;
+  line-height: 14px;
+}
+
+.BurgerMenu {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+  z-index: 100;
+  padding: 5px;
+  border: 0px solid rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0, 0);
+  fill: rgb(255, 255, 255);
+  transition: background-color 0.15s ease-in, fill 0.2s ease-in, transform 0.3s ease-in-out;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  display: none;
+  color: #950032;
+}
+.BurgerMenu:active,
+.BurgerMenu:hover{
+  background-color: #950032;
+  fill: white;
+}
+
+.NavBar {
+  list-style-type: none;
+  position: absolute;
+  top: 50px;
+  right: 15%;
+  margin: 0;
+  padding: 0;
+  /*overflow: hidden;*/
+  text-align: center;
+  display: flex;
+  align-items: center;
+  /*hover color: #950032*/
+}
+
+.SideBar {
+  list-style-type: none;
+  height: 300px;
+  width: 175px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255, .7);
+  overflow-x: hidden;
+  padding-top: 0px;
+  margin-top: 0px;
+  display: none;
+  transition: 0.5s;
+  padding-left: 20px;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center
+}
+
+.Research {
+  background-color: #D5D5D5;
+  padding-top: 150px;
+}
+
+.Link:hover{
+  color: #950032 !important;
+}
+
+
+
+/*YOUTUBE*/
+.youtubePlayer {
+    /*position: relative;*/
+    /*padding-bottom: 56.23%;*/
+    /* Use 75% for 4:3 videos */
+    /*height: 0;*/
+    /*overflow: hidden;*/
+    /*max-width: 100%;*/
+    /*background: #000;*/
+    /*margin: 5px;*/
+    /*position: relative;
+    height: 100%;*/
+}
+
+.youtubePlayer iframe {
+    position: relative;
+    left: 0;
+    /*width: 90%;*/
+    /*height: 100%;*/
+    width: 500px;
+    height: 375px;
+    z-index: 2;
+    background: transparent;
+    
+
+}
+
+
+
+.youtubePlayer img {
+    width: 500px;
+    /*width: 90%;*/
+    /*bottom: 0;
+    display: block;
+    left: 0;
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    height: auto;*/
+  
+    cursor: pointer;
+    -webkit-transition: .4s all;
+    -moz-transition: .4s all;
+    transition: .4s all;
+}
+
+.youtubePlayer img:hover {
+    -webkit-filter: brightness(75%);
+}
+
+.youtubePlayer .play {
+   /* height: 72px;
+    width: 72px;
+    left: 50%;
+    top: 50%;
+    margin-left: 0px;
+    margin-top: 50px;
+    position: relative;
+    background: url("//i.imgur.com/TxzC70f.png") no-repeat;
+    cursor: pointer;*/
+}
+
+@media screen and (max-width: 670px): {
+  .youtubePlayer iframe {
+              width: 90%;
+              height: auto;
+                        }
+  .youtubePlayer img {
+              width: 90%;
+              height: auto;
+                        }
+
+  }
+
+@media screen and (max-width: 670px) {
+
+    .NavBar{display:none;}
+    .SideBar{display:flex;}
+    .BurgerMenu{display:block;}
+    .youtubePlayer iframe {
+              width: 90%;
+              height: auto;
+                        }
+    .youtubePlayer img {
+              width: 90%;
+              height: auto;
+                        }
+}
+
+/*FONTS*/
+@font-face {
+    font-family: 'Avenir';
+    src: url('./Fonts/Avenir-HeavyOblique.woff2') format('woff2'),
+        url('./Fonts/Avenir-HeavyOblique.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('./Fonts/Avenir-Light.woff2') format('woff2'),
+        url('./Fonts/Avenir-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('./Fonts/Avenir-Medium.woff2') format('woff2'),
+        url('./Fonts/Avenir-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('./Fonts/Avenir-Roman.woff2') format('woff2'),
+        url('./Fonts/Avenir-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('./Fonts/Avenir-Heavy.woff2') format('woff2'),
+        url('./Fonts/Avenir-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('./Fonts/Avenir-LightOblique.woff2') format('woff2'),
+        url('./Fonts/Avenir-LightOblique.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Black Oblique';
+    src: url('./Fonts/Avenir-BlackOblique.woff2') format('woff2'),
+        url('./Fonts/Avenir-BlackOblique.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('./Fonts/Avenir-Oblique.woff2') format('woff2'),
+        url('./Fonts/Avenir-Oblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Book';
+    src: url('./Fonts/Avenir-Book.woff2') format('woff2'),
+        url('./Fonts/Avenir-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('./Fonts/Avenir-MediumOblique.woff2') format('woff2'),
+        url('./Fonts/Avenir-MediumOblique.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Book';
+    src: url('./Fonts/Avenir-BookOblique.woff2') format('woff2'),
+        url('./Fonts/Avenir-BookOblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('./Fonts/Avenir-Black.woff2') format('woff2'),
+        url('./Fonts/Avenir-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
