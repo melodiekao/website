@@ -169,6 +169,12 @@ export default {
 			height: '250px',
 			marginBottom: '-6px',
 
+			'@media (min-width: 0px)': {
+			    ':hover': {
+			      WebkitFilter: 'brightness(75%)',
+			    }
+			  },
+
 			'@media (max-width: 500px)': {
             	width: '87.5%',
             	height: 'auto',
@@ -282,6 +288,12 @@ export default {
 			width: '350px',
 			height: '250px',
 			marginBottom: '-6px',
+
+			'@media (min-width: 0px)': {
+			    ':hover': {
+			      WebkitFilter: 'brightness(75%)',
+			    }
+			  },
 
 			'@media (max-width: 500px)': {
             	width: '87.5%',
@@ -408,11 +420,19 @@ export default {
 			// height: '250px',
 			marginBottom: '-6px',
 
+			'@media (min-width: 0px)': {
+			    ':hover': {
+			      WebkitFilter: 'brightness(75%)',
+			    }
+			  },
+
 			'@media (max-width: 670px)': {
             	width: '90%',
             	height: 'auto',
             	// marginBottom: '2px',
                         }
+
+                 
 
 		},
 		text: {
