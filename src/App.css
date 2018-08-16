@@ -134,6 +134,8 @@
 
 /*YOUTUBE*/
 .youtubePlayer {
+  margin-bottom: -6px;
+  /*padding-top: -5px;*/
     /*position: relative;*/
     /*padding-bottom: 56.23%;*/
     /* Use 75% for 4:3 videos */
@@ -153,7 +155,7 @@
     /*height: 100%;*/
     width: 500px;
     height: 375px;
-    z-index: 2;
+    z-index: 1;
     background: transparent;
     
 
@@ -175,7 +177,6 @@
     top: 0;
     border: none;
     height: auto;*/
-  
     cursor: pointer;
     -webkit-transition: .4s all;
     -moz-transition: .4s all;
@@ -189,26 +190,71 @@
 .youtubePlayer .play {
    /* height: 72px;
     width: 72px;
-    left: 50%;
-    top: 50%;
-    margin-left: 0px;
-    margin-top: 50px;
+    /*left: 214px;*/
+    /*left: calc(250px - 36px);*/
+    /*top: 50%;*/
+
+    /*margin-left: 0px;
+    margin-top: 165px;
+    padding-top: 0px;
+    margin-bottom: -230px;
+    z-index: 2;
     position: relative;
     background: url("//i.imgur.com/TxzC70f.png") no-repeat;
     cursor: pointer;*/
 }
 
-@media screen and (max-width: 670px): {
-  .youtubePlayer iframe {
-              width: 90%;
-              height: auto;
-                        }
-  .youtubePlayer img {
-              width: 90%;
-              height: auto;
-                        }
+.youtubePlayer .play:hover {
+    -webkit-filter: brightness(75%);
+}
 
-  }
+
+.youtubePlayer {
+  margin-bottom: -6px;
+  /*padding-top: -5px;*/
+    /*position: relative;*/
+    /*padding-bottom: 56.23%;*/
+    /* Use 75% for 4:3 videos */
+    /*height: 0;*/
+    /*overflow: hidden;*/
+    /*max-width: 100%;*/
+    /*background: #000;*/
+    /*margin: 5px;*/
+    /*position: relative;
+    height: 100%;*/
+}
+
+.youtubePlayer iframe {
+    position: relative;
+    left: 0;
+    /*width: 90%;*/
+    /*height: 100%;*/
+    width: 500px;
+    height: 375px;
+    z-index: 1;
+    background: transparent;
+    
+
+}
+
+
+/*TEACHING*/
+
+.youtubePlayerTeaching img {
+    width: 350px;
+    height: 244px;
+    margin-bottom: 0px;
+}
+
+.youtubePlayerTeaching iframe {
+    width: 350px;
+    height: 244px;
+    margin-bottom: 0px;
+}
+
+.youtubePlayerTeaching img:hover {
+    -webkit-filter: brightness(75%);
+}
 
 @media screen and (max-width: 670px) {
 
@@ -221,6 +267,17 @@
                         }
     .youtubePlayer img {
               width: 90%;
+              height: auto;
+                        }
+}
+
+@media screen and (max-width: 500px) {
+    .youtubePlayerTeaching img {
+              width: 100.2%;
+              height: auto;
+                        }
+    .youtubePlayerTeaching iframe {
+              width: 100.2%;
               height: auto;
                         }
 }

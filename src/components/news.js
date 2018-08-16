@@ -22,7 +22,7 @@ class News extends React.Component {
     function labnolThumb(id) {
       var thumb = '<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',
           play = '<div class="play"></div>';
-      return thumb.replace("ID", id) + play;
+      return play + thumb.replace("ID", id);
     }
 
     function labnolIframe() {
