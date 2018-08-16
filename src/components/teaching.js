@@ -6,6 +6,35 @@ import links from './../config/links'
 import Radium from 'radium';
 
 class Teaching extends React.Component {
+  componentDidMount(){
+    var div, n,
+        v = document.getElementsByClassName("youtubePlayerTeaching");
+    for (n = 0; n < v.length; n++) {
+        div = document.createElement("div");
+        div.setAttribute("data-id", v[n].dataset.id);
+        div.innerHTML = labnolThumb(v[n].dataset.id);
+        div.onclick = labnolIframe;
+        v[n].appendChild(div);
+        // v[n].style.webkitTransform = 'scale(1)';
+    }
+    // );
+
+    function labnolThumb(id) {
+      var thumb = '<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',
+          play = '<div class="play"></div>';
+      return play + thumb.replace("ID", id);
+    }
+
+    function labnolIframe() {
+      var iframe = document.createElement("iframe");
+      var embed = "https://www.youtube.com/embed/ID?autoplay=1";
+      iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
+      iframe.setAttribute("frameborder", "0");
+      iframe.setAttribute("allowfullscreen", "1");
+      this.parentNode.replaceChild(iframe, this);
+    }
+      }
+      
   render() {
 
     var proj = [{title: 'Flipped Classroom: Basic Astronomy and the Galaxy',
@@ -13,20 +42,20 @@ class Teaching extends React.Component {
                  text : ['In this introduction to astronomy class for undergraduates at Caltech, students worked in groups of 3-4 to solve problems on the board during class time (3x 1hr classes + 2x 2hr problem solving hours).  We organized these problems into weekly modules (e.g. blackbodies, hydrostatic equilibrium, radiative diffusion, etc.), with a focus on helping the students develop a physical intuition for the physics occurring in that module.  To do this, we wrote problems that emphasized order-of-magnitude thinking relative to computational ability, and we circulated throughout the problem-solving groups to ask students to explain in words the physics that was ocurring in each problem.  Finally, we required students to write-up 1-2 problems of their own choosing for each module, allowing them to take ownership over their own learning.  The format of these write-ups combined math and expository writing in the form of blog posts (links available on class website).  To support the in-class problem solving sessions, I recorded short (~15 minute) video lectures that the students had to watch prior to class that summarized the most salient required reading points, and we reviewed the material for 15 minutes at the beginning of the class and answered any questions.',
                  'Professor: John Johnson, Head TA: Melodie Kao, Co TA: Trevor David'
                           ],
-                 link: links.teaching.ay20
+                 link: [{'link': links.teaching.ay20, 'is_vid': false, 'key': 0}]
                     },
 
                 {title: 'Traditional Classroom: Relativistic Astrophysics',
                  img:  images.placeholder,
                  text : ['This advanced undergraduate class for astronomy majors at Caltech followed a traditional classroom format with 3x 1hr lectures each week by the professor and 1x 2hr office hours each week hosted by myself. Problem sets emphasized computation but could also be solved more elegantly if students were able to ...  ',
                  'Professor: E. Sterl Phinney, TA: Melodie Kao'],
-                 link: links.teaching.ay104
+                 link: [{'link': links.teaching.ay104, 'is_vid': false, 'key': 1}]
                     },
 
                 {title: 'Field Classroom: Wilderness Astrophysics',
                  img:  images.FIG_allAgeEvol_revisedb,
                  text : ['This is a class that Dr. Parke Loyd and I are developing for non-major ASU students'],
-                 link: links.research.kao2018
+                 link: [{'link': links.research.kao2018, 'is_vid': false, 'key': 2}]
                     },
 
                 {title: 'Pedagogy Seminar: Principles of University Learning and Teaching in STEM',
@@ -35,14 +64,14 @@ class Teaching extends React.Component {
                  '<i> Research on university-level teaching and learning in Science, Technology, Engineering, and Mathematics (STEM) disciplines has progressed rapidly in recent years; a well-established body of evidence-based principles now exists to inform instructors and students at the undergraduate and graduate levels. Increasingly, future PIs and faculty are called upon to demonstrate knowledge of and ability to apply established pedagogical and assessment practices, as well as to analyze the efficacy of new approaches.</i>',
                   '<i>In this course, weekly interactive meetings will provide focused overviews and guided application of key pedagogical research, such as prior knowledge and misconceptions, novice-expert differences, and cognitive development as applied to university teaching. We will also explore emerging university teaching and learning practices and their theoretical basis (e.g., the flipped classroom, online learning). Readings will inform in-class work and students will apply principles to a project of their choice.</i>'
                         ],
-                 link: links.teaching.e110
+                 link: [{'link': links.teaching.e110, 'is_vid': false, 'key': 3}]
                     },
 
                 {title: 'Caltech Tango Initiative: Argentine Tango Immersion',
                  img:  images.ydwarf_radioLuminosity,
                  text : ['What is the purpose of this class?'
                         ],
-                 link: links.research.Ydwarfs
+                 link: [{'link': links.news.phDcomics, 'is_vid': true, 'key': 4}]
                     },
 
                    ]
