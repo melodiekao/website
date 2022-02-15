@@ -1,0 +1,6 @@
+//Change default directory page
+DirectoryIndex index.html
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^melodiekao.com [NC]
+RewriteRule ^(.*)$ http://www.melodiekao.com [L,R=301,NC]

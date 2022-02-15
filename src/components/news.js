@@ -36,9 +36,60 @@ class News extends React.Component {
       }
   render() {
 
-    var proj = [{title: 'First Magnetic Field Measurements of an Extrasolar Planetary Mass Object',
+
+
+    var proj = [
+                {title: 'Feb 2022: Interview with Hex about how I think about data',
+                 img:  images.hex1,
+                 text : [{text: '2/2022: This was a fun interview with Barry McCardel, the founder of Hex, about how I think about data.' , key:0}
+                          ],
+                 link: [{'link': links.news.hex1, 'is_vid': false, 'key': 0}],
+                 key:0
+                    },
+
+                {title: 'March 2021: Awarded the 51 Pegasi b Fellowship',
+                 img:  images.skurka_insta,
+                 text : [{text: '7/2021: I am the first guide of color for Andrew Skurka Adventures, which specializes in teaching folks how to travel off-trail in some of the most beautiful places in the world!' , key:0}
+                          ],
+                 link: [{'link': links.news.skurka, 'is_vid': false, 'key': 0}],
+                 key:0
+                    },
+
+                {title: 'March 2021: Awarded the 51 Pegasi b Fellowship',
+                 img:  images.pegb_fellow,
+                 text : [{text: '3/2021: I was awarded the 51 Pegasi Fellowship and will be working with Jonathan Fortney at UCSC starting fall 2021!', key:0}
+                          ],
+                 link: [{'link': links.news.pegb_fellowship, 'is_vid': false, 'key': 0}],
+                 key:0
+                    },
+
+                 {title: 'December 2019: Wilderness Astronomy ASU Now article',
+                 img:  images.wildAstro_article,
+                 text : [{text: '12/2019: ASU Now article about the Wilderness Astronomy class that I co-created and co-teach with Parke Loyd at ASU!', key:0}
+                          ],
+                 link: [{'link': links.news.asuNow_wildAstro, 'is_vid': false, 'key': 0}],
+                 key:0
+                    },
+
+                {title: 'November 2019: Selected for the NASA PI LaunchPad Program',
+                 img:  images.pi_launchpad,
+                 text : [{text: '11/2019: Selected from a pool of ~200 applicants for a 2.5-day NASA workshop that accelerates science ideas into NASA mission proposals!  We learned the ins and outs of science objectives, Level 1 and 2 requirements, and science traceability matrices.  We also honed our pitches and networked with representatives from NASA, JPL, Goddard, Ames, APL, Ball Aerospace, Lockheed Martin, Northrup Grumman, and several other aerospace organizations.', key:0}
+                          ],
+                 link: [{'link': links.news.pi_launchpad, 'is_vid': false, 'key': 0}],
+                 key:0
+                    },
+
+                {title: 'October 2018: Selected for the Astro2020 Decadal Survey Early Career Focus Session',
+                 img:  images.decadal_earlyCareer,
+                 text : [{text: '10/2018: Selected to serve as a delegate to the Astro2020 Decadal Survey Early Career Focus Session!', key:0}
+                          ],
+                 link: [{'link': links.news.decadal_earlyCareer, 'is_vid': false, 'key': 0}],
+                 key:0
+                    },
+
+                {title: 'September 2018: First Magnetic Field Measurements of an Extrasolar Planetary Mass Object',
                  img:  images.simp0136_pressRelease,
-                 text : [{text: 'NRAO press release: VLA Detects Possible Extrasolar Planetary-Mass Magnetic Powerhouse.  This was also picked up by <a href="https://www.cnn.com/2018/08/07/world/rogue-planet-beyond-solar-system-trnd/index.html">CNN</a>, <a href="https://www.nbcnews.com/mach/science/huge-rogue-planet-has-magnetic-field-scientists-can-t-explain-ncna898026">NBC</a>, <a href="https://www.reddit.com/r/space/comments/94dfoe/">Reddit</a>, and others.', key:0}
+                 text : [{text: '09/2018: NRAO press release: VLA Detects Possible Extrasolar Planetary-Mass Magnetic Powerhouse.  This was also picked up by <a href="https://www.cnn.com/2018/08/07/world/rogue-planet-beyond-solar-system-trnd/index.html">CNN</a>, <a href="https://www.nbcnews.com/mach/science/huge-rogue-planet-has-magnetic-field-scientists-can-t-explain-ncna898026">NBC</a>, <a href="https://www.reddit.com/r/space/comments/94dfoe/">Reddit</a>, and others.', key:0}
                           ],
                  link: [{'link': links.news.nrao, 'is_vid': false, 'key': 0}],
                  key:0
@@ -47,7 +98,7 @@ class News extends React.Component {
 
                 {title: 'Announcement of Hubble Fellows',
                  img:  images.hubbleFellow,
-                 text : [{text: 'I was selected as a 2018 NASA Hubble Fellow.', key:1}],
+                 text : [{text: '04/2018: I was selected as a 2018 NASA Hubble Fellow.', key:1}],
                  link: [{'link': links.news.hubbleFellowship, 'is_vid': false, 'key': 1}],
                  key:1
                     },
@@ -55,7 +106,7 @@ class News extends React.Component {
 
                 {title: 'Backpacker Magazine',
                  img:  images.backpacker,
-                 text : [{text: 'Infographic + article in collaboration with Backpacker Magazine: How to Navigate by the Stars. I am an avid long-distance solo backpacker, so I picked up a few tricks that I shared with Backpacker Magazine.', key:2}],
+                 text : [{text: '02/2017: Infographic + article in collaboration with Backpacker Magazine: How to Navigate by the Stars. I am an avid long-distance solo backpacker, so I picked up a few tricks that I shared with Backpacker Magazine.', key:2}],
                  link: [{'link': links.news.backpacker, 'is_vid': false, 'key': 2}],
                  key:2
                     },   

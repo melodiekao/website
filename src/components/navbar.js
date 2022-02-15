@@ -27,6 +27,12 @@ class NavBar extends Component {
 	          		teaching
 	          	</Link>
 	  	      </li>
+	  	      <div style={styles.navbar.navSpacer}>&nbsp;</div>
+	          <li style={styles.navbar.navItem} key='key5' >
+	          	<Link style={styles.navbar.navLink} to="/toolkit" className='Link'>
+	          		toolkit
+	          	</Link>
+	          </li>
 	          <div style={styles.navbar.navSpacer}>&nbsp;</div>
 	          <li style={styles.navbar.navItem} key='key4'>
           		<a href={links.cv}  target="_blank" style={styles.navbar.navLink} className='Link'>
@@ -34,7 +40,7 @@ class NavBar extends Component {
             	</a>
 	          </li>
 	          <div style={styles.navbar.navSpacer}>&nbsp;</div>
-	          <li style={styles.navbar.navItem} key='key6' >
+	          <li style={styles.navbar.navItem} key='key5' >
 	          	<Link style={styles.navbar.navLink} to="/news" className='Link'>
 	          		news
 	          	</Link>

@@ -30,6 +30,11 @@ class Sidebar extends Component {
 	          	</Link>
 	          </li>
 	          <li style={styles.sidebar.navItem}>
+	          	<Link style={styles.sidebar.navLink} to="/toolkit">
+	          		toolkit
+	          	</Link>
+	          </li>
+	          <li style={styles.sidebar.navItem}>
           		<a href={links.cv}  target="_blank" style={styles.sidebar.navLink}>
                 	cv
             	</a>

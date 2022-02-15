@@ -9,10 +9,12 @@ import Navbar from './components/navbar.js'
 import Home from './components/home.js'
 import Research from './components/research.js'
 import Teaching from './components/teaching.js'
+import Toolkit from './components/toolkit.js'
 import News from './components/news.js'
 import BurgerMenu from './components/burgerMenu.js'
 
 import Radium,{StyleRoot} from 'radium';
+
 
 class App extends Component {
   render() {
@@ -47,12 +49,13 @@ class App extends Component {
 
           <Switch>
           <Route exact path="/home" component={Home} />
+          <Redirect exact from="/" to="/home"  />
           <Route path="/research" component={Research} />
           <Route path="/teaching" component={Teaching} />
+          <Route path="/toolkit"  component={Toolkit} />
           <Route path="/cv" component={Home} />
           <Route path="/students" component={Home} />
           <Route path="/news" component={News} />
-          <Redirect from="/" to="/home"  />
           </Switch>
           </div>
       </Router>
@@ -61,8 +64,8 @@ class App extends Component {
   }
 }
 
-export default App;
 
+export default App;
 
 
 

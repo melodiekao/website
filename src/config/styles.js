@@ -459,7 +459,6 @@ export default {
 		    paddingLeft: '0%',
 		    paddingTop: '0px',
 		    paddingBottom: '5px',
-
 		    fontSize: '20px',
 		    color: "#808080",
 
