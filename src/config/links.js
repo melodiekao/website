@@ -38,6 +38,7 @@ export default {
 		asuNow_wildAstro: 'https://asunow.asu.edu/20191219-discoveries-explore-stars-%E2%80%94-and-wilderness',
 		pegb_fellowship: 'https://www.hsfoundation.org/eight-exceptional-scientists-receive-51-pegasi-b-fellowship-award/',
 		skurka: 'https://www.instagram.com/p/CSPQetcjkXd/',
-		hex1:   'https://hex.tech/blog/friends-of-data/melodie-kao-1'
+		hex1:   'https://hex.tech/blog/friends-of-data/melodie-kao-1',
+		hex2:   'https://hex.tech/blog/friends-of-data/melodie-kao-2'
 	}
 }

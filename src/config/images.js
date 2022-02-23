@@ -26,5 +26,6 @@ export default {
 	wildAstro_article		: require('./../images/NEWS_20191213_wildAstro.jpg'),
 	pegb_fellow				: require('./../images/NEWS_51pegbFellow.png'),	
 	skurka_insta			: require('./../images/NEWS_melodie_outside.JPG'),
-	hex1					:  require('./../images/NEWS_hex1.png'),
+	hex1					: require('./../images/NEWS_hex1.png'),
+	hex2					: require('./../images/NEWS_hex2.png'),
 }

@@ -39,9 +39,17 @@ class News extends React.Component {
 
 
     var proj = [
+                {title: 'Feb 2022: Part II of Hex interview',
+                 img:  images.hex2,
+                 text : [{text: '2/2022: Part II of my interview with Hex: Barriers to STEM equality and boundary setting (aka how I think about STEM education and equity).' , key:0}
+                          ],
+                 link: [{'link': links.news.hex2, 'is_vid': false, 'key': 0}],
+                 key:0
+                    },
+
                 {title: 'Feb 2022: Interview with Hex about how I think about data',
                  img:  images.hex1,
-                 text : [{text: '2/2022: This was a fun interview with Barry McCardel, the founder of Hex, about how I think about data.' , key:0}
+                 text : [{text: '2/2022: Part I of a fun interview with Barry McCardel, the founder of Hex (a startup building collaborative data workspaces), about how I think about data.' , key:0}
                           ],
                  link: [{'link': links.news.hex1, 'is_vid': false, 'key': 0}],
                  key:0
